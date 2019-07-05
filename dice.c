@@ -6,6 +6,12 @@
 
 int main(){
   int diceA,diceB;
+  char name[100];
+
+  printf("What is your name?\n");
+  scanf("%s",name);
+  printf("Hello, %s!\n",name);
+  
   printf("Rolling the dice...\n");
   srand((unsigned)time(NULL));
   
@@ -18,8 +24,8 @@ int main(){
   printf("Total value: %d\n",diceA+diceB);
 
   if(diceA+diceB>7)
-    printf("You won.\n");
+    printf("%s won!\n",name);
   else
-    printf("You lost.\n");
+    printf("%s lost!\n",name);
   return 0;
 }
